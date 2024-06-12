@@ -2,5 +2,6 @@
     "cSpell.words": [
         "CONTRAT",
         "dropna"
-    ]
+    ],
+    "python.analysis.typeCheckingMode": "off"
 }

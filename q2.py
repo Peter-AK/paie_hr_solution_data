@@ -5,7 +5,7 @@ from pandas import DataFrame, Series
 import matplotlib.pyplot as plt
 
 
-def avg_salary(data_set: DataFrame) -> None:
+def avg_salary(data_set: DataFrame) -> Series:
     """Fonction qui permet de determiner le salaire moyen
     en fonction du nombre d'années d'expérience
 
@@ -35,8 +35,6 @@ def avg_salary(data_set: DataFrame) -> None:
         observed=True,
     )["TAUX_HORAIRE_BRUT"].mean()
 
-    print(result_set)
-
     # Plot results
     result_set.plot.bar(
         rot=False,
@@ -45,3 +43,5 @@ def avg_salary(data_set: DataFrame) -> None:
     plt.ylabel("salaire moyen [Eur/heure]")
     plt.xlabel("années d'expérience [années]")
     plt.show()
+    print(result_set)
+    return result_set
